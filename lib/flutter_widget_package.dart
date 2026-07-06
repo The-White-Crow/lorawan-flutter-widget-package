@@ -1,0 +1,1 @@
+library flutter_widget_package;
