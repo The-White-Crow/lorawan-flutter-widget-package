@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod/legacy.dart';
 import 'package:flutter_widget_package/provider/action_button_controller_provider.dart';
+import 'package:flutter_widget_package/widget/loading_spinner.dart';
 
 class LoadingButton extends ConsumerWidget {
   const LoadingButton({
@@ -64,7 +65,7 @@ class LoadingButton extends ConsumerWidget {
                     onPressed?.call();
                   }
                 },
-          icon: isLoading ? CircularProgressIndicator(color: colors.primaryFixed) : child,
+          icon: isLoading ? LoadingSpinner(color: colors.primaryFixed) : child,
           label: Text(
             title ?? '',
             style: textStyle ?? Theme.of(context).textTheme.labelMedium?.copyWith(color: colors.primaryFixed),
