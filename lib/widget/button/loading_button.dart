@@ -65,10 +65,10 @@ class LoadingButton extends ConsumerWidget {
                     onPressed?.call();
                   }
                 },
-          icon: isLoading ? LoadingSpinner(color: colors.primaryFixed) : child,
+          icon: isLoading ? LoadingSpinner(color: colors.onPrimary) : child,
           label: Text(
             title ?? '',
-            style: textStyle ?? Theme.of(context).textTheme.labelMedium?.copyWith(color: colors.primaryFixed),
+            style: textStyle ?? Theme.of(context).textTheme.labelMedium?.copyWith(color: colors.onPrimary),
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
           ),
