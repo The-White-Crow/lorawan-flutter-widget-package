@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_core_package/flutter_core_package.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod/legacy.dart';
 import 'package:flutter_widget_package/provider/action_button_controller_provider.dart';
@@ -68,7 +69,12 @@ class LoadingButton extends ConsumerWidget {
           icon: isLoading ? LoadingSpinner(color: colors.onPrimary) : child,
           label: Text(
             title ?? '',
-            style: textStyle ?? Theme.of(context).textTheme.labelMedium?.copyWith(color: colors.onPrimary),
+            style:
+                textStyle ??
+                Theme.of(context).textTheme.bodySmall?.copyWith(
+                  color: colors.onPrimary,
+                  fontWeight: AppFontWeight.bold,
+                ),
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
           ),
